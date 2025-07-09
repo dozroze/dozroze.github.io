@@ -41,6 +41,10 @@
       max-width: 1000px;
       width: 100%;
       padding: 0 20px;
+      display: none;
+    }
+    .section.active {
+      display: block;
     }
     .gallery {
       display: grid;
@@ -75,14 +79,20 @@
       margin: 0 auto 40px;
     }
   </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </head>
 <body>
   <div class="logo">Doz</div>
   <div class="slogan">Still, she speaks — in light, in silence.</div>
   <div class="nav">
-    <a href="#compcard">compcard</a>
-    <a href="#portfolio">portfolio</a>
-    <a href="#contact">contact</a>
+    <a href="#" onclick="showSection('compcard')">compcard</a>
+    <a href="#" onclick="showSection('portfolio')">portfolio</a>
+    <a href="#" onclick="showSection('contact')">contact</a>
   </div>
 
   <div id="compcard" class="section">
@@ -103,16 +113,19 @@
   </div>
 
   <div id="portfolio" class="section">
-    <!-- 포트폴리오 섹션 (원하는 내용으로 채워주세요) -->
-  </div>
-
-  <div id="creator" class="creator-section">
-    <h2>Creator</h2>
-    <p>감각적인 영상미와 감성적인 내레이션, 패션과 뷰티 콘텐츠를 아우르며 모델 이상의 감도를 전합니다. 릴스, 유튜브, 틱톡 등 다양한 채널에서 크리에이터로서의 도즈를 확인하세요.</p>
+    <!-- 포트폴리오 섹션 -->
   </div>
 
   <div id="contact" class="section">
-    <!-- 연락처/문의 섹션 (원하는 내용으로 채워주세요) -->
+    <div class="size-info">
+      📬 <strong>Contact & Channels</strong>
+
+      - 제안/문의: Instagram DM 또는 이메일 (<a href="mailto:dozroze@naver.com">dozroze@naver.com</a>)
+      - Instagram: <a href="https://www.instagram.com/dxoxzx" target="_blank">@dxoxzx</a>
+      - YouTube: <a href="https://youtube.com/@dxoxzx" target="_blank">@dxoxzx</a>
+      - TikTok: <a href="https://www.tiktok.com/@dxoxzx" target="_blank">@dxoxzx</a>
+      - Xiaohongshu: <a href="https://www.xiaohongshu.com/user/profile/5efb95c8000000000100bd66" target="_blank">@d_o__z</a>
+    </div>
   </div>
 </body>
 </html>
