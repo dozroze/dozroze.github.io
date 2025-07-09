@@ -2,37 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>doz</title>
+  <title>dozroze Portfolio</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #ffffff;
+      background-color: #fff;
       color: #222;
+    }
+    .navbar {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      gap: 60px;
+      padding: 24px;
+      font-size: 18px;
+      font-weight: 500;
+      border-bottom: 1px solid #eee;
     }
-    h1 {
-      font-weight: 400;
-      font-size: 24px;
-      text-align: center;
-      max-width: 80%;
-      margin-top: 16px;
+    .navbar a {
+      color: #222;
+      text-decoration: none;
+      cursor: pointer;
     }
-    img {
-      width: 320px;
-      max-width: 90vw;
-      height: auto;
-      border-radius: 10px;
+    .section {
+      display: none;
+      padding: 40px 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .active {
+      display: block;
+    }
+    .card {
+      margin-bottom: 40px;
+    }
+    .card img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .thumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .thumbs img {
+      width: 120px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
-  <img src="doz_main.jpg" alt="doz main image">
-  <h1>도즈의 포트폴리오 사이트에 오신 걸 환영합니다</h1>
+  <div class="navbar">
+    <a onclick="showSection('model')">Model</a>
+    <a onclick="showSection('creator')">Creator</a>
+  </div>
+
+  <div id="model" class="section active">
+    <div class="card">
+      <h2>Comp Card</h2>
+      <img src="IMG_7551.JPG" alt="compcard">
+    </div>
+    <div class="card">
+      <h2>Look 1 (White Top)</h2>
+      <div class="thumbs">
+        <img src="IMG_7551.JPG" onclick="openGallery(['IMG_7551.JPG','IMG_7552.JPG','IMG_7553.JPG'])">
+      </div>
+    </div>
+    <div class="card">
+      <h2>Look 2 (Black Top)</h2>
+      <div class="thumbs">
+        <img src="IMG_7554.JPG" onclick="openGallery(['IMG_7554.JPG'])">
+      </div>
+    </div>
+  </div>
+
+  <div id="creator" class="section">
+    <h2>Creator Portfolio - Coming Soon</h2>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function openGallery(images) {
+      const viewer = window.open("", "_blank");
+      viewer.document.write('<html><head><title>Gallery</title><style>body{margin:0;padding:40px;display:flex;flex-direction:column;align-items:center;font-family:sans-serif}img{max-width:90%;margin:20px auto;border-radius:10px}</style></head><body>');
+      images.forEach(src => viewer.document.write(`<img src="${src}">`));
+      viewer.document.write('</body></html>');
+    }
+  </script>
 </body>
 </html>
+
