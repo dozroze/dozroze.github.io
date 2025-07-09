@@ -6,121 +6,82 @@
   <title>Doz</title>
   <style>
     body {
-      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      background-color: #f9f9f9;
       font-family: 'Helvetica Neue', sans-serif;
-    }
-
-    .center {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
     }
-
     .logo {
       font-size: 3rem;
-      font-weight: bold;
-      color: #111;
-      margin-bottom: 10px;
+      font-weight: 700;
+      margin-top: 80px;
     }
-
-    .tagline {
-      font-size: 1rem;
-      font-weight: 400;
-      color: #555;
-      margin-bottom: 30px;
+    .slogan {
+      font-size: 1.1rem;
+      color: #666;
+      margin: 10px 0 30px;
     }
-
-    .button-container {
+    .nav {
       display: flex;
       gap: 20px;
+      margin-bottom: 60px;
     }
-
-    .nav-button {
-      padding: 10px 24px;
-      font-size: 1rem;
-      font-weight: 500;
-      background-color: black;
+    .nav a {
+      background: black;
       color: white;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
       text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 0.9rem;
     }
-
-    .nav-button:hover {
-      opacity: 0.8;
-    }
-
-    .section {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-      color: #111;
-      text-align: center;
-    }
-
     .gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
-      justify-content: center;
+      padding: 0 20px;
+      max-width: 800px;
     }
-
     .gallery img {
       width: 100%;
-      border-radius: 8px;
       object-fit: cover;
+      border-radius: 10px;
     }
-
-    .measurements {
+    .size-info {
+      margin-top: 30px;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.8;
       text-align: center;
-      font-size: 1rem;
-      margin-top: 20px;
-      color: #555;
+      white-space: pre-line;
     }
   </style>
 </head>
 <body>
-  <div class="center">
-    <div class="logo">Doz</div>
-    <div class="tagline">Still, she speaks — in light, in silence.</div>
-    <div class="button-container">
-      <a href="#compcard" class="nav-button">compcard</a>
-      <a href="#portfolio" class="nav-button">portfolio</a>
-      <a href="#contact" class="nav-button">contact</a>
-    </div>
+  <div class="logo">Doz</div>
+  <div class="slogan">Still, she speaks — in light, in silence.</div>
+  <div class="nav">
+    <a href="#compcard">compcard</a>
+    <a href="#portfolio">portfolio</a>
+    <a href="#contact">contact</a>
   </div>
 
-  <div class="section" id="compcard">
-    <div class="gallery">
-      <img src="IMG_7551.JPG" alt="doz compcard 1">
-      <img src="IMG_7552.JPG" alt="doz compcard 2">
-      <img src="IMG_7553.JPG" alt="doz compcard 3">
-      <img src="IMG_7554.JPG" alt="doz compcard 4">
-    </div>
-    <div class="measurements">
-      Height: 164cm &nbsp;|&nbsp; Bust: 31in &nbsp;|&nbsp; Waist: 24in &nbsp;|&nbsp; Hips: 33in &nbsp;|&nbsp; Shoes: 230mm<br>
-      Hair: Brown &nbsp;|&nbsp; Eyes: Dark Brown &nbsp;|&nbsp; Instagram: @dxoxzx
-    </div>
+  <div id="compcard" class="gallery">
+    <img src="IMG_7551.JPG" alt="compcard image 1" />
+    <img src="IMG_7552.JPG" alt="compcard image 2" />
+    <img src="IMG_7553.JPG" alt="compcard image 3" />
+    <img src="IMG_7554.JPG" alt="compcard image 4" />
   </div>
 
-  <div class="section" id="portfolio">
-    <h2>Portfolio</h2>
-    <p style="text-align:center; color:#999;">(Your portfolio images/videos can be placed here)</p>
-  </div>
-
-  <div class="section" id="contact">
-    <h2>Contact</h2>
-    <p style="text-align:center; color:#999;">Email: dozroze@naver.com</p>
+  <div class="size-info">
+    Height: 164cm\n
+    Bust: 31in    Waist: 24in    Hips: 33in\n
+    Shoes: 230mm\n
+    Hair: Brown    Eyes: Dark Brown\n
+    Instagram: <a href="https://www.instagram.com/dxoxzx" target="_blank">@dxoxzx</a>\n
+    Email: dozroze@naver.com
   </div>
 </body>
 </html>
