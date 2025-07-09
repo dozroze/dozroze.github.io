@@ -10,48 +10,71 @@
       padding: 0;
       background-color: #f9f9f9;
       font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    header {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
+      padding: 30px 50px 0;
     }
-    .logo {
+
+    .nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .centered-title {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .centered-title h1 {
       font-size: 3rem;
-      font-weight: 700;
-      margin-top: 80px;
+      margin-bottom: 10px;
     }
-    .slogan {
+
+    .centered-title p {
       font-size: 1.1rem;
       color: #666;
-      margin: 10px 0 30px;
     }
-    .nav {
+
+    .button-group {
       display: flex;
+      justify-content: center;
+      margin: 40px 0;
       gap: 20px;
-      margin-bottom: 60px;
     }
-    .nav a {
+
+    .button-group a {
       background: black;
       color: white;
       text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-size: 0.9rem;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 0.95rem;
     }
+
     .section {
       max-width: 1000px;
-      width: 100%;
+      margin: 0 auto;
       padding: 0 20px;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
+
     .gallery img {
       width: 100%;
       object-fit: cover;
       border-radius: 10px;
     }
+
     .size-info {
       margin-top: 30px;
       font-size: 0.95rem;
@@ -63,12 +86,22 @@
   </style>
 </head>
 <body>
-  <div class="logo">Doz</div>
-  <div class="slogan">Still, she speaks — in light, in silence.</div>
-  <div class="nav">
-    <a href="#compcard">compcard</a>
-    <a href="#portfolio">portfolio</a>
-    <a href="#contact">contact</a>
+  <header>
+    <div></div> <!-- 로고 왼쪽 비워둠 -->
+    <nav class="nav">
+      <a href="#portfolio">portfolio</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <div class="centered-title">
+    <h1>Doz</h1>
+    <p>Still, she speaks — in light, in silence.</p>
+  </div>
+
+  <div class="button-group">
+    <a href="#compcard">model</a>
+    <a href="#creator">creator</a>
   </div>
 
   <div id="compcard" class="section">
@@ -79,21 +112,21 @@
       <img src="IMG_7554.JPG" alt="compcard image 4" />
     </div>
     <div class="size-info">
-      Height: 164cm
-      Bust: 31in    Waist: 24in    Hips: 33in
-      Shoes: 230mm
-      Hair: Brown    Eyes: Dark Brown
-      Instagram: <a href="https://www.instagram.com/dxoxzx" target="_blank">@dxoxzx</a>
+      Height: 164cm  
+      Bust: 31in    Waist: 24in    Hips: 33in  
+      Shoes: 230mm  
+      Hair: Brown    Eyes: Dark Brown  
+      Instagram: <a href="https://www.instagram.com/dxoxzx" target="_blank">@dxoxzx</a>  
       Email: dozroze@naver.com
     </div>
   </div>
 
   <div id="portfolio" class="section">
-    <!-- 포트폴리오 섹션 (원하는 내용으로 채워주세요) -->
+    <!-- 포트폴리오 내용 -->
   </div>
 
   <div id="contact" class="section">
-    <!-- 연락처/문의 섹션 (원하는 내용으로 채워주세요) -->
+    <!-- 연락처 / 문의 -->
   </div>
 </body>
 </html>
