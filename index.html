@@ -1,6 +1,126 @@
-Doz
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doz</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
 
-Still, she speaks —
-in light, in silence.
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-[ model ]   [ creator ]
+    .logo {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-button {
+      padding: 10px 24px;
+      font-size: 1rem;
+      font-weight: 500;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .nav-button:hover {
+      opacity: 0.8;
+    }
+
+    .section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #111;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .measurements {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <div class="logo">Doz</div>
+    <div class="tagline">Still, she speaks — in light, in silence.</div>
+    <div class="button-container">
+      <a href="#compcard" class="nav-button">compcard</a>
+      <a href="#portfolio" class="nav-button">portfolio</a>
+      <a href="#contact" class="nav-button">contact</a>
+    </div>
+  </div>
+
+  <div class="section" id="compcard">
+    <div class="gallery">
+      <img src="IMG_7551.JPG" alt="doz compcard 1">
+      <img src="IMG_7552.JPG" alt="doz compcard 2">
+      <img src="IMG_7553.JPG" alt="doz compcard 3">
+      <img src="IMG_7554.JPG" alt="doz compcard 4">
+    </div>
+    <div class="measurements">
+      Height: 164cm &nbsp;|&nbsp; Bust: 31in &nbsp;|&nbsp; Waist: 24in &nbsp;|&nbsp; Hips: 33in &nbsp;|&nbsp; Shoes: 230mm<br>
+      Hair: Brown &nbsp;|&nbsp; Eyes: Dark Brown &nbsp;|&nbsp; Instagram: @dxoxzx
+    </div>
+  </div>
+
+  <div class="section" id="portfolio">
+    <h2>Portfolio</h2>
+    <p style="text-align:center; color:#999;">(Your portfolio images/videos can be placed here)</p>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center; color:#999;">Email: dozroze@naver.com</p>
+  </div>
+</body>
+</html>
