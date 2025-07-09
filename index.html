@@ -17,60 +17,63 @@
       height: 100vh;
     }
     .logo {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      letter-spacing: 1px;
-      color: #000;
+      letter-spacing: 2px;
+      color: #333;
       margin-bottom: 10px;
     }
-    .quote {
+    h1 {
       font-size: 1.6rem;
       font-weight: 600;
       color: #333;
-      text-align: center;
-      line-height: 1.5;
-      margin-bottom: 40px;
+      margin: 0;
+    }
+    p {
+      font-size: 1rem;
+      color: #666;
+      margin: 10px 0 30px;
     }
     .buttons {
       display: flex;
       gap: 20px;
     }
-    .buttons a {
-      text-decoration: none;
-      background-color: #000;
-      color: #fff;
+    .button {
+      background-color: black;
+      color: white;
       padding: 12px 28px;
+      border: none;
       border-radius: 30px;
       font-size: 1rem;
       font-weight: 500;
-      transition: background-color 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
     }
-    .buttons a:hover {
-      background-color: #333;
+    .button:hover {
+      background-color: #444;
     }
-    .sns {
+    .footer {
       position: absolute;
       bottom: 20px;
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 0.85rem;
+      color: #aaa;
     }
-    .sns a {
-      color: #666;
+    .footer a {
+      color: #aaa;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
   <div class="logo">Doz</div>
-  <div class="quote">
-    Still, she speaks —<br/>in light, in silence.
-  </div>
+  <h1>Still, she speaks — in light, in silence.</h1>
   <div class="buttons">
-    <a href="model.html">model</a>
-    <a href="creator.html">creator</a>
+    <a href="model.html" class="button">model</a>
+    <a href="creator.html" class="button">creator</a>
   </div>
-  <div class="sns">
-    Instagram: <a href="https://instagram.com/dxoxzx" target="_blank">@dxoxzx</a>
+  <div class="footer">
+    Instagram: <a href="https://www.instagram.com/dxoxzx" target="_blank">@dxoxzx</a>
   </div>
 </body>
 </html>
